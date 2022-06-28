@@ -11,12 +11,20 @@
  * [S | A2 | A1 | A0 | MODE | SR/DF | PD1 | PD0 ]
  * */
 
+ /*
+    Modified to use the STM32F103
+ */
+
 #ifndef XPT2046_H
 #define XPT2046_H
 
 #include "main.h"
-#include "stm32f4xx_hal_spi.h"
-#include "stm32f4xx_hal_gpio.h"
+
+
+#include "stm32f1xx_hal_spi.h"
+//#include "stm32f4xx_hal_spi.h"
+#include "stm32f1xx_hal_gpio.h"
+//#include "stm32f4xx_hal_gpio.h"
 
 #define XPT2046_START_BIT  	(0x01 << 7)
 #define XPT2046_A2_ENABLE  	0x01 << 6
